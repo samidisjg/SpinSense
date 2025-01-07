@@ -21,7 +21,8 @@ def main():
                                                      read_from_stub=True,
                                                      stub_path="tracker_stubs/ball_detections.pkl"
                                                      )
-    
+    ball_detections = ball_tracker.interpolate_ball_postions(ball_detections)
+
     # court line Detector model
     court_model_path = "models/keypoints_model.pth"
     court_line_detector = CourtLineDetector(court_model_path)
@@ -44,6 +45,9 @@ def main():
     #     frame_with_keypoints = court_line_detector.draw_keypoints(frame, court_keypoints)
     #     output_video_frames.append(frame_with_keypoints)
 
+
+    ##Draw frame number on top left corner
+    
 
     # Save video
     save_video(output_video_frames, output_video_path="output_videos/output_video.avi")
