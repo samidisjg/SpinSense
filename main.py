@@ -2,6 +2,7 @@ from utils import read_video, save_video
 from trackers.player_tracker import PlayerTracker  # Import PlayerTracker directly
 from trackers.ball_tracker import BallTracker  # Import BallTracker directly
 from court_line_detector.court_line_detector import CourtLineDetector  # Import CourtLineDetector directly
+import cv2
 
 def main():
     # Read video
@@ -47,7 +48,9 @@ def main():
 
 
     ##Draw frame number on top left corner
-    
+    for i, frame in enumerate(output_video_frames):
+        cv2.putText(frame, f"Frame: {i}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
 
     # Save video
     save_video(output_video_frames, output_video_path="output_videos/output_video.avi")
