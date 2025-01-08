@@ -25,7 +25,7 @@ def main():
                                                      read_from_stub=True,
                                                      stub_path="tracker_stubs/ball_detections.pkl"
                                                      )
-    ball_detections = ball_tracker.interpolate_ball_postions(ball_detections)
+    ball_detections = ball_tracker.interpolate_ball_positions(ball_detections)
 
     # court line Detector model
     court_model_path = "models/keypoints_model.pth"
@@ -38,6 +38,10 @@ def main():
 
     # # Mini Court
     mini_court = MiniCourt(video_frames[0])
+
+    #Detect Ball Shots
+    ball_shot_frames = ball_tracker.get_ball_shot_frames(ball_detections)
+    print(ball_shot_frames)
 
     # Draw Output
     ## Draw player bounding boxes
