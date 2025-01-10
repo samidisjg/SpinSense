@@ -2,7 +2,6 @@ from utils import(read_video,
                   save_video,
                   measure_distance,
                   convert_pixel_distance_to_meters,
-                  convert_meters_to_pixel_distance,
                   draw_player_stats
                 )
 import constants
