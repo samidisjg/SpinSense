@@ -44,7 +44,7 @@ SpinSense is an AI/ML-driven tennis analysis system that combines state-of-the-a
    git clone https://github.com/samidisjg/SpinSense.git  
    cd SpinSense
  
-2. Download YOLOv8 weights from the Ultralytics YOLOv5n GitHub repository.
+2. Download YOLOv5n weights from the Ultralytics YOLOv5n GitHub repository.
 
    <img src="/input_videos/output.png" alt="tennis_court" style="width: 100%;">
 
