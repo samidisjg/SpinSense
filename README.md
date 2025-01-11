@@ -26,7 +26,7 @@ SpinSense is an AI/ML-driven tennis analysis system that combines state-of-the-a
 ---
 
 ## Technologies Used 🛠️🎾
-- YOLOv8 for object detection.
+- YOLOv5n for object detection.
 - PyTorch for training custom CNNs for keypoint detection.
 - OpenCV for video processing and visualization.
 - NumPy for data analysis and manipulation.   
